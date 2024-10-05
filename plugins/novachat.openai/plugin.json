@@ -1,0 +1,18 @@
+{
+  "id": "novachat.openai",
+  "name": "OpenAI Provider",
+  "description": "OpenAI Provider",
+  "version": "0.1.0",
+  "author": "NovaChat",
+  "configuration": {
+    "title": "OpenAI",
+    "properties": {
+      "openai.apiKey": {
+        "type": "string",
+        "description": "OpenAI API key",
+        "default": "",
+        "format": "password"
+      }
+    }
+  }
+}
