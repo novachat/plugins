@@ -1,0 +1,23 @@
+{
+  "name": "@novachat/plugins",
+  "version": "1.0.0",
+  "description": "NovaChat Plugins",
+  "scripts": {
+    "sync": "vite-node src/main.ts"
+  },
+  "devDependencies": {
+    "@liuli-util/test": "^3.8.0",
+    "@octokit/rest": "^21.0.2",
+    "@types/libnpmsearch": "^2.0.7",
+    "@types/pacote": "^11.1.8",
+    "find-cache-dir": "^5.0.0",
+    "libnpmsearch": "^8.0.0",
+    "pacote": "^19.0.0",
+    "vite-node": "^2.1.2",
+    "vitest": "^2.1.2",
+    "zx": "^8.1.8"
+  },
+  "dependencies": {
+    "path-exists": "^5.0.0"
+  }
+}
