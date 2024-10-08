@@ -21,7 +21,7 @@
     "id": "novachat.vertex-anthropic",
     "name": "Vertex Anthropic",
     "description": "Vertex Anthropic Provider",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "author": "NovaChat",
     "configuration": {
       "title": "Vertex Anthropic",
