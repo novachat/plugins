@@ -3,11 +3,9 @@ import fs from 'fs/promises'
 import findCacheDir from 'find-cache-dir'
 import path from 'path'
 import { cp, mkdir, readFile } from 'fs/promises'
+import pluginManifests from '../plugins.json'
 
 const pluginsPath = path.join(__dirname, '../plugins.json')
-export const pluginManifests = JSON.parse(
-  await fs.readFile(pluginsPath, 'utf8'),
-) as Record<string, { version: string }>
 
 export async function downloadPackage(packageName: string) {
   const cacheDir = findCacheDir({ name: packageName })
