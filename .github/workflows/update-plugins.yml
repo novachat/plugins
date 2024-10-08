@@ -2,8 +2,8 @@ name: Update Plugins
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 每天运行
-  workflow_dispatch: # 允许手动触发
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
