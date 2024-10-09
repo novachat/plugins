@@ -246,5 +246,22 @@
     "description": "Ollama Provider",
     "version": "0.2.1",
     "author": "NovaChat"
+  },
+  "novachat.anthropic": {
+    "id": "novachat.anthropic",
+    "name": "Anthropic",
+    "description": "Anthropic Provider",
+    "version": "0.1.0",
+    "author": "NovaChat",
+    "configuration": {
+      "title": "Anthropic",
+      "properties": {
+        "anthropic.apiKey": {
+          "type": "string",
+          "description": "Anthropic API Key",
+          "default": ""
+        }
+      }
+    }
   }
 }
