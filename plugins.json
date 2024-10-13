@@ -268,7 +268,7 @@
     "id": "novachat.plugin-gemini",
     "name": "Gemini",
     "description": "Gemini Provider",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "configuration": {
       "title": "gemini",
       "properties": {
