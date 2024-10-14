@@ -1,14 +1,20 @@
 import search from 'libnpmsearch'
 import path from 'path'
-import { downloadPackage, pluginManifests, updatePlugin } from './lib'
+import { downloadPackage, updatePlugin } from './lib'
 import { pathExists } from 'path-exists'
 import { readFile } from 'fs/promises'
 import { $ } from 'zx'
+import isCI from 'is-ci'
+import pluginManifests from '../plugins.json'
 
 const plugins = await search('novachat-plugin')
 
 async function commitAndPush(message: string) {
-  await $`git add . && git commit -m "${message}" && git push`
+  if (isCI) {
+    await $`git add . && git commit -m "${message}" && git push`
+  } else {
+    console.log(message)
+  }
 }
 
 async function handlePlugin(it: search.Result) {
