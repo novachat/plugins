@@ -1,0 +1,16 @@
+{
+  "id": "novachat.gemini",
+  "name": "Gemini",
+  "description": "Gemini Provider",
+  "version": "0.1.3",
+  "configuration": {
+    "title": "gemini",
+    "properties": {
+      "gemini.apiKey": {
+        "type": "string",
+        "description": "Google Generative AI API Key",
+        "format": "password"
+      }
+    }
+  }
+}
