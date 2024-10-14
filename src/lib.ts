@@ -4,6 +4,7 @@ import findCacheDir from 'find-cache-dir'
 import path from 'path'
 import { cp, mkdir, readFile } from 'fs/promises'
 import pluginManifests from '../plugins.json'
+import { pathExists } from 'path-exists'
 
 const pluginsPath = path.join(__dirname, '../plugins.json')
 
@@ -30,6 +31,12 @@ export async function updatePlugin(packageDir: string, pluginDir: string) {
     path.resolve(packageDir, 'publish/plugin.json'),
     path.resolve(pluginDir, 'plugin.json'),
   )
+  if (await pathExists(path.resolve(packageDir, 'README.md'))) {
+    await cp(
+      path.resolve(packageDir, 'README.md'),
+      path.resolve(pluginDir, 'README.md'),
+    )
+  }
   pluginManifests[manifest.id] = manifest
   await fs.writeFile(pluginsPath, JSON.stringify(pluginManifests, null, 2))
 }
