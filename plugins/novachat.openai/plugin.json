@@ -2,7 +2,7 @@
   "id": "novachat.openai",
   "name": "OpenAI",
   "description": "OpenAI Provider",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "NovaChat",
   "configuration": {
     "title": "OpenAI",
